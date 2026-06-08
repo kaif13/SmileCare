@@ -1,6 +1,6 @@
 # SmileCare Dental Studio
 
-A mobile-first React JavaScript and Tailwind CSS website focused on appointment bookings and WhatsApp leads.
+A mobile-first React JavaScript and Tailwind CSS website focused on appointment bookings through WhatsApp.
 
 ## Setup
 
@@ -12,20 +12,15 @@ npm run dev
 
 Before launch, edit `src/config.js` with the clinic name, phone, address and contact details. Set `VITE_WHATSAPP_NUMBER` in `.env` using international format without `+` or spaces.
 
-## Firebase leads
+## WhatsApp leads
 
-1. Create a Firebase project and web app.
-2. Enable Firestore Database.
-3. Copy the web app values into `.env`.
-4. Add Firestore rules appropriate for your production environment.
-
-Both forms save documents to the `leads` collection before opening WhatsApp. The website still opens WhatsApp when Firebase is intentionally left unconfigured.
+The appointment and quick-contact forms prepare a WhatsApp message with the visitor's details. No Firebase or database setup is required.
 
 ## Content and images
 
 - Edit services, contact details and brand settings in `src/config.js`.
-- Edit page copy and placeholder team/review data in `src/App.jsx`.
-- Replace images in `public/images`, then update the paths at the top of `src/App.jsx`.
+- Edit page sections in `src/components`.
+- Replace images in `public/images`, then update shared paths in `src/constants/images.js`.
 - Update SEO and Dentist JSON-LD details in `index.html`.
 
 ## Commands

@@ -6,12 +6,5 @@ export default defineConfig({
   plugins: [tailwindcss(), react()],
   build: {
     target: 'es2020',
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes('firebase')) return 'firebase'
-        },
-      },
-    },
   },
 })
